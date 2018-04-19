@@ -3,57 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Connect four</title>
-    <style type="text/css">
-
-      .rectangle {
-        width: 30px;
-        height: 30px;
-        background-color: blue;
-        display: inline-block;
-
-      }
-
-      .circle {
-        background-color: white;
-        width: 28px;
-        height: 28px;
-        border-radius: 100%;
-      }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
     <div id='container'>
-      <div id='rectangles'>
-      </div>
+      <h1>Connect 4</h1>
+      <div id = "names">
+        <input id = 'player1' placeholder='Player 1 name'</input><input id = 'player2' placeholder='Player 2 name'</input>
+        <button id = 'submit'>Submit</button>
+  		</div>
+      <div id='player-color'></div>
+      <div class = "row">
+  		</div>
     </div>
 
-    <script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
-
-      function displayGame() {
-        var output = '';
-        for (var i=0; i<5; i++) {
-          //output += "\n<div class='rectangle'><div class='circle'></div></div>";
-          for (var j=0; j<5; j++) {
-            output += "\n\t<div class='rectangle'><div class='circle'></div></div>\n";
-          }
-          output += "<br>";
-
-        }
-        document.getElementById('rectangles').innerHTML = output;
-      }
-
-      function connectFour() {
-        var color = "red";
-        document.getElementById('')
-      }
-
-    displayGame()
-
-    </script>
+  	<script src="display_game.js"></script>
 
   </body>
 </html>
