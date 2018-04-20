@@ -1,5 +1,6 @@
 var player1_moves = [];
 var player2_moves = [];
+var movesnum = 0;
 
 function checkCircle(column_num, classname, player) {
 
@@ -25,7 +26,7 @@ function checkCircle(column_num, classname, player) {
 }
 
 
-function make_move (pos, classname, player) {
+function make_move(pos, classname, player) {
 
 	if (player === "player1") {
 
@@ -42,7 +43,6 @@ function make_move (pos, classname, player) {
 		$(pos).attr("data-name", player);
 
 	}
-
 }
 
 function moves() {
@@ -50,9 +50,9 @@ function moves() {
 	var $all_circles = $(".circle");
 	var player_turn = 1;
 
-	$.each($all_circles, function (index, value) {
+	$.each($all_circles, function(index, value) {
 
-		$all_circles.eq(index).click(function () {
+		$all_circles.eq(index).click(function() {
       console.log("hi")
 			if ( $(this).attr("data-name") === "na") {
         console.log("na")
@@ -61,16 +61,16 @@ function moves() {
           console.log($(this).attr("class").split(" ")[1])
 					checkCircle($(this).attr("class").split(" ")[1], "circle-blue", "player1");
 					player_turn = 2;
-					moves ++;
+					movesnum ++;
 
-					// add check for win
+          check_if_won($(this).attr("class").split(" ")[1], "player1");
 
 				} else {
 					checkCircle($(this).attr("class").split(" ")[1], "circle-red", "player2");
 					player_turn = 1;
-					moves ++;
+					movesnum ++;
 
-					// add check for win
+          check_if_won($(this).attr("class").split(" ")[1], "player2");
 
 				}
 

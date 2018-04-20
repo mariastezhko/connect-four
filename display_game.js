@@ -5,11 +5,13 @@ $(document).ready(function() {
 
  		$("#submit").click(function() {
 
+      console.log("hi")
+
  			$("input").css("display", "none");
  			$("#submit").remove();
 
  			$("#player-color").html(
- 				$("#player1").val() + " is Blue, " + $("#player2").val() + " is Red</br>" +
+ 				$("#player1").val() + " is Blue, " + $("#player2").val() + " is Red</br></br>" +
  				$("#player1").val() + " goes first"
  				);
 
