@@ -28,7 +28,6 @@ function check_column (column_num, player) {
 
 			for (var j = all_pos.length - 1; j > 1; j--) {
 
-				console.log(j);
 
 				if (all_pos[j].getAttribute("data-name") === player &&
 					all_pos[j-1].getAttribute("data-name") === player &&
@@ -123,7 +122,7 @@ function isWinner(player) {
 
 function play_again () {
 
-    $("#names").append("<button id = 'play-again'>Play Again?</button>");
+    $("#names").append("<button id = 'play-again'>Play Again</button>");
     $("#play-again").click(function () {
     console.log("clicked");
     location.reload();
