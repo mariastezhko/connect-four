@@ -51,3 +51,11 @@ h1 {
 	background-color: #fff;
 	vertical-align: center;
 }
+
+.circle-blue {
+	background-color: blue;
+}
+
+.circle-red {
+	background-color: red;
+}

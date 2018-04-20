@@ -9,7 +9,8 @@ $(document).ready(function() {
  			$("#submit").remove();
 
  			$("#player-color").html(
- 				$("#player1").val() + " is Blue, " + $("#player2").val() + " is Red</br>"
+ 				$("#player1").val() + " is Blue, " + $("#player2").val() + " is Red</br>" +
+ 				$("#player1").val() + " goes first"
  				);
 
 	 		 $("#player-color").css("display", "block");
@@ -32,14 +33,14 @@ $(document).ready(function() {
 			}
 		}
     $(".row").css("background-color", "silver");
-    
+
 		var $circles = $(".circle");
 
 		for (var i = 0; i < $circles.length; i++) {
 			$circles.eq(i).attr("data-value", i);
 		}
 
-		//make_move();
+		moves();
 
 	}
 
